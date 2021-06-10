@@ -6,9 +6,10 @@ import Home from "./features/home/Home";
 import Calendar from "./features/calendar/Calendar";
 import Day from "./features/day/Day";
 
-import generateRandomAppointments from "./utils";
+import generateRandomAppointments from "./utils/utils";
 
 const appointments = generateRandomAppointments(70);
+console.log(appointments);
 
 const App = () => (
   <Router>
