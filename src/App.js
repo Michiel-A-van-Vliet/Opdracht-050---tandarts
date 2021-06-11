@@ -7,6 +7,7 @@ import Calendar from "./features/calendar/Calendar";
 import Day from "./features/day/Day";
 
 import generateRandomAppointments from "./utils/utils";
+import Patients from "./features/patients/Patients";
 
 const appointments = generateRandomAppointments(70);
 console.log(appointments);
@@ -25,9 +26,12 @@ const App = () => (
           <li>
             <Link to="/day">Day view</Link>
           </li>
+          <li>
+            <Link to="/patients">Patients</Link>
+          </li>
         </ul>
       </nav>
-      <main>
+      <div>
         <Switch>
           <Route path="/calendar">
             <Calendar appointments={appointments} />
@@ -35,11 +39,14 @@ const App = () => (
           <Route path="/day">
             <Day appointments={appointments.filter((app) => app.day === 1)} />
           </Route>
+          <Route path="/patients">
+            <Patients />
+          </Route>
           <Route path="/">
             <Home />
           </Route>
         </Switch>
-      </main>
+      </div>
     </div>
   </Router>
 );

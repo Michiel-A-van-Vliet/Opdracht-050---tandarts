@@ -2,8 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = [
   {
+    id: 0,
     firstName: "Piet",
     lastName: "Pietersen",
+    birthYear: "1901",
   },
 ];
 
