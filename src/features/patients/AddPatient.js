@@ -58,6 +58,8 @@ function AddPatient() {
         type="number"
         value={state.birthYear.value}
         onChange={handleChange}
+        min="1900"
+        max="2021"
         required
       />
       <input
