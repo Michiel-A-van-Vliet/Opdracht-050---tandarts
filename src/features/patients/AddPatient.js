@@ -42,6 +42,7 @@ function AddPatient() {
         type="text"
         value={state.firstName.value}
         onChange={handleChange}
+        required
       />
       <input
         name="lastName"
@@ -49,27 +50,32 @@ function AddPatient() {
         type="text"
         value={state.lastName.value}
         onChange={handleChange}
+        required
       />
       <input
         name="birthYear"
         placeholder="Geboortejaar"
-        type="text"
+        type="number"
         value={state.birthYear.value}
         onChange={handleChange}
+        required
       />
       <input
         name="telephone"
         placeholder="Telefoonnummer"
-        type="text"
+        type="tel"
         value={state.telephone.value}
         onChange={handleChange}
+        pattern="[0-9]{10}"
+        required
       />
       <input
         name="email"
         placeholder="Email adres"
-        type="text"
+        type="email"
         value={state.email.value}
         onChange={handleChange}
+        required
       />
       <button type="submit">Add Patient</button>
     </form>
