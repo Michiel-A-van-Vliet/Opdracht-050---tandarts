@@ -8,6 +8,7 @@ import Day from "./features/day/Day";
 
 import generateRandomAppointments from "./utils/utils";
 import Patients from "./features/patients/Patients";
+import Dentists from "./features/dentists/Dentists";
 
 const appointments = generateRandomAppointments(70);
 // console.log(appointments);
@@ -29,6 +30,9 @@ const App = () => (
           <li>
             <Link to="/patients">Patiënten</Link>
           </li>
+          <li>
+            <Link to="/dentists">Tandartsen</Link>
+          </li>
         </ul>
       </nav>
       <hr />
@@ -42,6 +46,9 @@ const App = () => (
           </Route>
           <Route path="/patients">
             <Patients />
+          </Route>
+          <Route path="/dentists">
+            <Dentists />
           </Route>
           <Route path="/">
             <Home />
