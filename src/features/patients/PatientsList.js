@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import PatientsListItem from "./PatientsListItem";
-import { patientsList } from "./patientsSlice";
 // import { patientsList } from "./patientsSlice";
 
 const PatientsList = () => {
@@ -16,6 +15,8 @@ const PatientsList = () => {
           firstName={patient.firstName}
           lastName={patient.lastName}
           birthYear={patient.birthYear}
+          telephone={patient.telephone}
+          email={patient.email}
         />
       ))}
     </tbody>

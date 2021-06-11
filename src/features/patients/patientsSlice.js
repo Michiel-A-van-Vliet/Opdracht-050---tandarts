@@ -6,6 +6,8 @@ const initialState = [
     firstName: "Piet",
     lastName: "Pietersen",
     birthYear: "1901",
+    telephone: "0612345678",
+    email: "pietpietersen@zeurpiet.nl",
   },
 ];
 

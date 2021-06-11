@@ -10,7 +10,7 @@ import generateRandomAppointments from "./utils/utils";
 import Patients from "./features/patients/Patients";
 
 const appointments = generateRandomAppointments(70);
-console.log(appointments);
+// console.log(appointments);
 
 const App = () => (
   <Router>
@@ -27,10 +27,11 @@ const App = () => (
             <Link to="/day">Day view</Link>
           </li>
           <li>
-            <Link to="/patients">Patients</Link>
+            <Link to="/patients">Patiënten</Link>
           </li>
         </ul>
       </nav>
+      <hr />
       <div>
         <Switch>
           <Route path="/calendar">

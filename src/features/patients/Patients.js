@@ -1,6 +1,6 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import AddPatient from "./AddPatient";
+// import { useSelector } from "react-redux";
+// import AddPatient from "./AddPatient";
 import PatientsList from "./PatientsList";
 
 const Patients = () => {
@@ -16,6 +16,9 @@ const Patients = () => {
             <th>Voornaam</th>
             <th>Achternaam</th>
             <th>Geboortejaar</th>
+            <th>Telefoon</th>
+            <th>Email</th>
+            {/* <th>Ziek?</th> */}
           </tr>
         </thead>
         {/* <PatientsList patients={allPatients} /> */}
