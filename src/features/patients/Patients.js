@@ -1,15 +1,14 @@
 import React from "react";
 // import { useSelector } from "react-redux";
-// import AddPatient from "./AddPatient";
+import AddPatient from "./AddPatient";
 import PatientsList from "./PatientsList";
 
 const Patients = () => {
-  //   const allPatients = useSelector((state) => state.patients);
-
   return (
     <main>
       <h2>Patiënten</h2>
-      {/* <AddPatient /> */}
+      <AddPatient />
+      <hr />
       <table style={{ width: "100%" }}>
         <thead>
           <tr>
@@ -21,7 +20,6 @@ const Patients = () => {
             {/* <th>Ziek?</th> */}
           </tr>
         </thead>
-        {/* <PatientsList patients={allPatients} /> */}
         <PatientsList />
       </table>
     </main>

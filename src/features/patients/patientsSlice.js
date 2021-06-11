@@ -15,13 +15,23 @@ export const patientsSlice = createSlice({
   name: "patients",
   initialState,
   reducers: {
-    // insert reducers here
+    addPatient: (state, action) => {
+      const newPatient = {
+        id: Date.now(),
+        firstName: action.payload.firstName,
+        lastName: action.payload.lastName,
+        birthYear: action.payload.birthYear,
+        telephone: action.payload.telephone,
+        email: action.payload.email,
+      };
+      state.push(newPatient);
+    },
   },
 });
 
 export const patientsList = (state) => state.patients;
 
 // export reducers
-// export const { **insert reducer** } = patientsSlice.actions;
+export const { addPatient } = patientsSlice.actions;
 
 export default patientsSlice.reducer;
