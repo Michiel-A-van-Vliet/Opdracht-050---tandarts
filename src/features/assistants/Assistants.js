@@ -6,7 +6,7 @@ import AssistantsList from "./AssistantsList";
 const Assistants = () => {
   return (
     <main>
-      <h2>Patiënten</h2>
+      <h2>Assistenten</h2>
       <AddAssistant />
       <hr />
       <table style={{ width: "100%" }}>
