@@ -17,7 +17,7 @@ const Assistants = () => {
             <th>Geboortejaar</th>
             <th>Telefoon</th>
             <th>Email</th>
-            {/* <th>Ziek?</th> */}
+            <th>Ziek?</th>
           </tr>
         </thead>
         <AssistantsList />

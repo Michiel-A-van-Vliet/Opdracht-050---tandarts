@@ -1,6 +1,7 @@
 import React from "react";
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 // import { removeAssistant } from "./assistantsSlice" ;
+import { toggleIsSickAssistant } from "./assistantsSlice";
 
 const AssistantsListItem = ({
   firstName,
@@ -9,8 +10,13 @@ const AssistantsListItem = ({
   id,
   telephone,
   email,
+  isSick,
 }) => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
+
+  const handleIsSickChange = () => {
+    dispatch(toggleIsSickAssistant({ id: id, isSick: !isSick }));
+  };
 
   return (
     <tr id={id}>
@@ -19,9 +25,9 @@ const AssistantsListItem = ({
       <td>{birthYear}</td>
       <td>{telephone}</td>
       <td>{email}</td>
-      {/* <td>
-        <button>Verwijder afspraken</button>
-      </td> */}
+      <td>
+        <input type="checkbox" checked={isSick} onChange={handleIsSickChange} />
+      </td>
     </tr>
   );
 };
