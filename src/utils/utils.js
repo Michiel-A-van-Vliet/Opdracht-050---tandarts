@@ -31,3 +31,10 @@ const generateRandomAppointments = (num) =>
     .map((_) => generateRandomAppointment());
 
 export default generateRandomAppointments;
+
+// const dentists = getRandomDentist(4) // add to slice???
+// const assistants = getRandomAssistants(2)
+// const patients = getRandomPatients(50)
+// getEmailPatient
+// getEmailDentist
+// nog een opmerking
