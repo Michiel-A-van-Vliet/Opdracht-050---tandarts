@@ -53,21 +53,21 @@ function AddDentist() {
       <input
         name="birthYear"
         placeholder="Geboortejaar"
-        type="text"
+        type="number"
         value={state.birthYear.value}
         onChange={handleChange}
       />
       <input
         name="telephone"
         placeholder="Telefoonnummer"
-        type="text"
+        type="tel"
         value={state.telephone.value}
         onChange={handleChange}
       />
       <input
         name="email"
         placeholder="Email adres"
-        type="text"
+        type="email"
         value={state.email.value}
         onChange={handleChange}
       />
