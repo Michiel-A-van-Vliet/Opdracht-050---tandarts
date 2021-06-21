@@ -1,6 +1,7 @@
 import React from "react";
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 // import { removeDentist } from "./dentistsSlice" ;
+import { toggleIsSick } from "./dentistsSlice";
 
 const DentistsListItem = ({
   firstName,
@@ -9,8 +10,13 @@ const DentistsListItem = ({
   id,
   telephone,
   email,
+  isSick,
 }) => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
+
+  const handleIsSickChange = () => {
+    dispatch(toggleIsSick({ id: id, isSick: !isSick }));
+  };
 
   return (
     <tr id={id}>
@@ -19,9 +25,9 @@ const DentistsListItem = ({
       <td>{birthYear}</td>
       <td>{telephone}</td>
       <td>{email}</td>
-      {/* <td>
-        <button>Verwijder afspraken</button>
-      </td> */}
+      <td>
+        <input type="checkbox" checked={isSick} onChange={handleIsSickChange} />
+      </td>
     </tr>
   );
 };

@@ -17,6 +17,7 @@ const DentistsList = () => {
           birthYear={dentist.birthYear}
           telephone={dentist.telephone}
           email={dentist.email}
+          isSick={dentist.isSick}
         />
       ))}
     </tbody>
